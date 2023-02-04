@@ -15,14 +15,13 @@ def englishToFrench():
 @app.route("/french_to_english")
 def frenchToEnglish():
     textToTranslate = request.args.get('textToTranslate')
-    translated_text = translator.french_to_englisg(textToTranslate)
-    # Write your code here
+    translated_text = translator.french_to_english(textToTranslate)
     return translated_text
 
 
 @app.route("/")
 def renderIndexPage():
-    render_template("index.html")
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
